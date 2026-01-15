@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabal | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Sacramento&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <a href="#" class="logo">
+                        <span class="logo-top">Prabal</span>
+                        <span class="logo-bottom">Poudyal</span>
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="header-socials">
+                        <a href="https://www.facebook.com/Prabal.Poudyal.07" target="_blank" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/beingprbl/" target="_blank" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/beingprbl" target="_blank" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/beingprbl" target="_blank" aria-label="X (Twitter)"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@beingprbl" target="_blank" aria-label="TikTok"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.pinterest.com/prbl07/" target="_blank" aria-label="Pinterest"><i
+                                class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content animate-on-scroll">
+                    <h1>Hi, I'm Prabal Poudyal.<br><span class="gradient-text">I build digital experiences.</span></h1>
+                    <p>A passionate developer crafting beautiful, functional, and user-centered web applications.</p>
+                    <a href="#projects" class="btn btn-primary">See my work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container animate-on-scroll">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text animate-on-scroll">
+                        <!-- Interactive Brand Logo -->
+                        <div class="brand-reveal-container" onclick="this.classList.toggle('active')">
+                            <img src="brand_logo.jpg" alt="Being PRBL" class="brand-logo">
+                            <div class="brand-description">
+                                <span class="tagline-text">Literally me.</span>
+                            </div>
+                        </div>
+
+                        <p>I am a developer who loves solving problems and creating efficient solutions. I specialize in
+                            modern web technologies and have a keen eye for design.</p>
+                        <p>When I'm not coding, I'm probably exploring new tech trends, gaming, or working on personal
+                            projects.</p>
+                    </div>
+                    <div class="about-visual animate-on-scroll">
+                        <div class="carousel">
+                            <div class="carousel-inner">
+                                <img src="photo1.jpg" alt="Prabal Poudyal 1" class="carousel-item active">
+                                <img src="photo2.jpg" alt="Prabal Poudyal 2" class="carousel-item">
+                                <img src="photo3.jpg" alt="Prabal Poudyal 3" class="carousel-item">
+                            </div>
+                            <button class="carousel-control prev" aria-label="Previous Photo"><i
+                                    class="fa-solid fa-chevron-left"></i></button>
+                            <button class="carousel-control next" aria-label="Next Photo"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Toolkit Section -->
+        <section id="toolkit">
+            <div class="container animate-on-scroll">
+                <h2>My Toolkit</h2>
+                <div class="toolkit-grid">
+                    <div class="tool-card">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fa-brands fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="animate-on-scroll">Featured Projects</h2>
+                <div class="projects-grid centered-grid">
+                    <!-- Project 1 (Cooking) -->
+                    <div class="project-card cooking-card animate-on-scroll">
+                        <div class="project-img">
+                            <i class="fa-solid fa-fire-burner fa-3x fa-bounce"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="gradient-text">Something is cooking.</h3>
+                            <p>Great things take time. Stay tuned for an amazing project reveal!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container animate-on-scroll">
+                <h2>Get In Touch</h2>
+                <div class="contact-layout">
+                    <!-- Left Column: Info & Map -->
+                    <div class="contact-info-wrapper">
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="info-content">
+                                    <h3>Email</h3>
+                                    <p>prabalpoudyal7@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                                <div class="info-content">
+                                    <h3>Phone</h3>
+                                    <p>+977 9749227670</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="info-content">
+                                    <h3>Location</h3>
+                                    <p>Jhapa, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-container">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Jhapa+District,+Nepal&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Form -->
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="user_name" required placeholder="Johnny Depp">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="user_email" required
+                                    placeholder="johnnydepp@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Where is the bloody rum?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+                            <p id="form-status" style="margin-top: 1rem; font-size: 0.9rem;"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.facebook.com/Prabal.Poudyal.07" target="_blank" aria-label="Facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/beingprbl/" target="_blank" aria-label="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/beingprbl" target="_blank" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/beingprbl" target="_blank" aria-label="X (Twitter)"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.tiktok.com/@beingprbl" target="_blank" aria-label="TikTok"><i
+                        class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.pinterest.com/prbl07/" target="_blank" aria-label="Pinterest"><i
+                        class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <p>&copy; 2026 Prabal Poudyal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
