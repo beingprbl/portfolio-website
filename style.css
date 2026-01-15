@@ -798,6 +798,8 @@ h2 {
     transition: all 0.3s ease;
     z-index: 1100;
     /* Above menu */
+    margin-left: 0.5rem;
+    /* Gap from theme toggle */
 }
 
 .mobile-menu-btn:hover {
@@ -908,31 +910,60 @@ h2 {
 
 /* Responsive */
 @media (max-width: 900px) {
+
+    /* Header Adjustments */
     .nav-links {
         display: none;
     }
 
     .header-socials {
         display: none;
-        /* Hide top socials on mobile, moved to menu */
     }
 
     .mobile-menu-btn {
         display: flex;
-        /* Show 3-dot button */
     }
 
+    /* Move logo slightly left by reducing container padding or margin */
+    /* Assuming standard padding is 2rem, reduce left padding slightly if needed, or translate logo */
+    .container {
+        padding: 0 1.5rem;
+        /* Standard mobile padding */
+    }
+
+    .logo {
+        transform: translateX(-10px);
+        /* Explicitly move logo left as requested */
+    }
+
+    /* Contact Section Adjustments */
     .contact-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
+        /* Center content logic via 1 column */
     }
 
     .contact-form-wrapper {
         padding: 1.5rem;
-        /* Reduced padding */
+        /* Adjust frame for mobile view */
+        margin: 0 auto;
+        /* Center duplicate margins */
+        transform: translateX(-5px);
+        /* Move slightly left as requested to "adapt" */
+        width: 100%;
+        max-width: 500px;
+        /* Constrain width for aesthetic */
     }
 
-    /* Fix Get In Touch section framing */
+    .contact-info-wrapper {
+        width: 100%;
+        max-width: 500px;
+        /* Constrain width */
+        margin: 0 auto;
+        transform: translateX(-5px);
+        /* Align with form */
+    }
+
     .contact-item {
         padding: 1rem;
     }
@@ -941,11 +972,6 @@ h2 {
         width: 50px;
         height: 50px;
         font-size: 1.2rem;
-    }
-
-    /* Ensure content doesn't overflow */
-    .container {
-        padding: 0 1.5rem;
     }
 
     .hero-content h1 {
