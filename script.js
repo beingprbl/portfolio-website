@@ -126,6 +126,8 @@ if (contactForm) {
     });
 }
 
+
+
 // Mobile Menu Logic
 const mobileBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
