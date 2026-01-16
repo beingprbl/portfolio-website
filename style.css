@@ -431,12 +431,22 @@ h2 {
     line-height: 1.8;
 }
 
+
+/* About Meta Container (Logo + Details) */
+.about-meta-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
 /* Brand Reveal (About Section) */
 .brand-reveal-container {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    margin-bottom: 2rem;
+    /* margin-bottom removed as it's now controlled by the parent container gap/margin */
+    flex-shrink: 0;
 }
 
 .brand-logo {
@@ -452,9 +462,10 @@ h2 {
 .brand-description {
     position: absolute;
     top: 50%;
-    left: 330px;
-    /* Adjusted for 300px logo */
-    /* To the right of the logo */
+    left: 100%;
+    /* Position relative to the logo edge */
+    margin-left: 20px;
+    /* Small gap */
     transform: translateY(-50%) translateX(-20px);
     background: var(--card-bg);
     padding: 1rem 1.8rem;
@@ -495,7 +506,7 @@ h2 {
 /* Hover/Active State */
 .brand-reveal-container:hover .brand-logo,
 .brand-reveal-container.active .brand-logo {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.05) rotate(3deg);
     border-color: var(--primary-color);
 }
 
@@ -504,6 +515,64 @@ h2 {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) translateX(0);
+}
+
+/* Personal Details */
+.personal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card-bg);
+    /* Optional: distinct background */
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.detail-item:hover {
+    transform: translateX(10px);
+    border-color: var(--primary-color);
+    background: var(--surface-bg);
+}
+
+.detail-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--input-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-info .label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-info .value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: 'Outfit', sans-serif;
 }
 
 
@@ -563,10 +632,23 @@ h2 {
 
 /* Toolkit - Mobile Responsive */
 @media (max-width: 768px) {
+    .about-meta-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
     .brand-reveal-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        /* No margin-bottom needed as flex gap handles it */
+    }
+
+    .brand-logo {
+        height: 380px;
+        /* Bigger on mobile */
+        max-width: 90vw;
+        /* Prevent overflow */
     }
 
     .brand-description {
@@ -574,7 +656,8 @@ h2 {
         top: auto;
         left: auto;
         transform: translateY(10px);
-        margin-top: 1rem;
+        margin: 1rem 0 0 0;
+        /* Reset margins */
     }
 
     .brand-description::before {
@@ -591,6 +674,61 @@ h2 {
     .brand-reveal-container:hover .brand-description,
     .brand-reveal-container.active .brand-description {
         transform: translateY(0);
+    }
+
+    /* Visibility Utilities */
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .show-on-mobile-only {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 2.5rem;
+        /* Gap from photos */
+        gap: 1.5rem;
+    }
+
+    .personal-details {
+        /* Reset any conflicting styles if needed, though specific classes override */
+    }
+
+    .detail-item {
+        flex: 1;
+        min-width: 140px;
+        /* Slightly smaller min-width for mobile row */
+        justify-content: center;
+    }
+}
+
+/* Default PC Visibility */
+.show-on-mobile-only {
+    display: none;
+}
+
+/* Mobile Reordering & Styling */
+@media (max-width: 768px) {
+
+    /* Hide the original PC text wrapper (which contains the top description) */
+    .about-text {
+        display: none;
+    }
+
+    /* Style the new mobile-only description */
+    .about-description-mobile {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .about-description-mobile p {
+        margin-bottom: 1.5rem;
+        color: var(--text-muted);
+        font-family: 'Playfair Display', serif;
+        font-size: 1.15rem;
+        line-height: 1.8;
     }
 }
 
