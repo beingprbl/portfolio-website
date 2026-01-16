@@ -109,11 +109,39 @@
                 <h2>About Me</h2>
                 <div class="about-grid">
                     <div class="about-text animate-on-scroll">
-                        <!-- Interactive Brand Logo -->
-                        <div class="brand-reveal-container" onclick="this.classList.toggle('active')">
-                            <img src="brand_logo.jpg" alt="Being PRBL" class="brand-logo">
-                            <div class="brand-description">
-                                <span class="tagline-text">Literally me.</span>
+                        <div class="about-meta-container">
+                            <!-- Interactive Brand Logo (PC View) -->
+                            <div class="brand-reveal-container hide-on-mobile"
+                                onclick="this.classList.toggle('active')">
+                                <img src="brand_logo.jpg" alt="Being PRBL" class="brand-logo">
+                                <div class="brand-description">
+                                    <span class="tagline-text">Literally me.</span>
+                                </div>
+                            </div>
+
+                            <!-- Personal Details (PC View) -->
+                            <div class="personal-details hide-on-mobile">
+                                <div class="detail-item">
+                                    <div class="detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                                    <div class="detail-info">
+                                        <span class="label">Born</span>
+                                        <span class="value">2006</span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon"><i class="fa-solid fa-droplet"></i></div>
+                                    <div class="detail-info">
+                                        <span class="label">Blood Group</span>
+                                        <span class="value">AB+</span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon"><i class="fa-solid fa-ruler-vertical"></i></div>
+                                    <div class="detail-info">
+                                        <span class="label">Height</span>
+                                        <span class="value">5'10"</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -139,6 +167,60 @@
                                     class="fa-solid fa-chevron-left"></i></button>
                             <button class="carousel-control next" aria-label="Next Photo"><i
                                     class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Details (Mobile View - Below Photos) -->
+                <div class="personal-details show-on-mobile-only animate-on-scroll">
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                        <div class="detail-info">
+                            <span class="label">Born</span>
+                            <span class="value">2006</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="detail-info">
+                            <span class="label">Blood Group</span>
+                            <span class="value">AB+</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-ruler-vertical"></i></div>
+                        <div class="detail-info">
+                            <span class="label">Height</span>
+                            <span class="value">5'10"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description (Mobile View - Bottom) -->
+                <div class="about-description-mobile show-on-mobile-only animate-on-scroll">
+                    <p>I am Prabal Poudyal, a passionate student who is currently pursuing Bsc.CSIT course in Mechi
+                        Multiple Campus situated in Bhadrapur,Jhapa.
+                        I completed my secondary education with a science background at Nidi Secondary School in
+                        Charpane,Jhapa.
+                        I am also a developer who loves solving problems and creating efficient solutions. I
+                        specialize in
+                        modern web technologies and have a keen eye for design.</p>
+                    <p>When I'm not coding, I'm probably exploring new tech trends, gaming, watching
+                        movies/football/ufc, listening to music or working on personal
+                        projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Brand (Mobile Only) -->
+        <section id="my-brand" class="show-on-mobile-only">
+            <div class="container animate-on-scroll">
+                <h2>My Brand</h2>
+                <div style="display: flex; justify-content: center;">
+                    <div class="brand-reveal-container" onclick="this.classList.toggle('active')">
+                        <img src="brand_logo.jpg" alt="Being PRBL" class="brand-logo">
+                        <div class="brand-description">
+                            <span class="tagline-text">Literally me.</span>
                         </div>
                     </div>
                 </div>
@@ -173,6 +255,10 @@
                     <div class="tool-card">
                         <i class="fa-solid fa-palette"></i>
                         <span>Design</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fa-solid fa-photo-film"></i>
+                        <span>Photo & Video Editing</span>
                     </div>
                 </div>
             </div>
@@ -287,5 +373,3 @@
 </body>
 
 </html>
-
-
